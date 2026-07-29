@@ -2,9 +2,9 @@
 
 const prompt = require("prompt-sync")();
 const cep = prompt("digite seu Cep:");
-const cepFormatado = cep.replace(/[^0-9]/g,"");
+const cepFormatado = cep.replace(/\D/g, '');
     if (cepFormatado.length !== 8) {
             console.log("Cep inválido, digite novamente");
-    } else {console.log("cep válido");
+    } else {console.log("cep válido" + cepFormatado);
     }
 
